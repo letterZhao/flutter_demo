@@ -1,71 +1,32 @@
 import 'package:flutter/material.dart';
 
-void main() => runApp(MyApp());
+void main() => runApp(MyHomeAPP());
 
-class MyApp extends StatelessWidget {
-  MyApp({super.key});
-
+class MyHomeAPP extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter  Demo',
-      theme: ThemeData(primarySwatch: Colors.blue),
-      home: MyHomePage(title: 'Flutter Demo HomePage'),
+      title: 'TextFieldAndFormTest',
+      home: ProgressIndicatorestRoute(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
-  final String title;
-
-  MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int state = 0;
-  void incrementState() {
-    setState(() {
-      state++;
-    });
-  }
-
-  void reset(){
-    setState(() {
-      state = 0;
-    });
-  }
-
+class ProgressIndicatorestRoute extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title),
-        backgroundColor: Colors.blue,
+        title: Text('progressIndicatorestTest'),
       ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Text('you have pushed button this many times: '),
-            Text(
-              '$state',
-              style: Theme.of(context).textTheme.headline4,
-            ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
 
-          ],
-        ),
-      ),
-
-
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: incrementState,
-        tooltip: 'increment',
-        child: Icon(Icons.add),
+        ],
       ),
     );
   }
-}
+
+
+
